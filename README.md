@@ -16,3 +16,5 @@ https://lernantino.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Angel Aguilar
+
+#Run Buddy Inc.
