@@ -41,7 +41,7 @@ header nav ul {
   list-style: none;
 }
 header nav ul li a {
-  margin: 0 30px;
+  padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
 }
@@ -78,7 +78,7 @@ section {
 /*hero style start*/
 .hero {
   background-image: url('../images/hero-bg.jpg');
- 
+  align-items: flex-start;
   background-size: cover;
   background-position: center;
   display:flex;
@@ -126,7 +126,7 @@ section {
   margin: 3.5%;
   color: #fff;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .hero-cta h2 {
@@ -143,9 +143,7 @@ section {
   font-size: 16px;
 }
 
-/*.intro { 
 
-}*/
 .intro p {
   line-height: 1.7;
   color: #39a6b2;
@@ -160,14 +158,6 @@ section {
 
   background: #fce138;
 }
-/*.steps div {
-  margin-bottom: 80px;
-}
-
-.steps img {
-  width: 15%;
-  margin: 10px 0;
-}*/
 
 .step h3 {
   flex: 1 30%;
@@ -217,12 +207,9 @@ section {
 .step-img img {
   max-width: 100%;
 }
-/*.steps span {
-  font-size: 38px;
-}*/
 
 .section-title {
-  font-size: 55px;
+  font-size: 48px;
   color:#024e76;
   padding-bottom: 20px;
   text-align: center;
@@ -239,9 +226,6 @@ section {
   border-color:#39a6b2;
 }
 
-/*.trainers {
-
-}*/
 .trainers {
   width: 100%;
   margin: 0 auto;
@@ -362,4 +346,20 @@ section {
 
 .flex-row {
   display: flex;
+}
+
+/*MEDIA QUERY for smaller desktop screens and smaller */
+
+@media screen and (max-width: 900px) {
+
+}
+
+/* media query for tablets and smaller*/
+@media screen and (max-width: 768px) {
+
+}
+
+/* media query for mobile phones and smaller */
+@media screen and (max-width: 575px) {
+
 }
