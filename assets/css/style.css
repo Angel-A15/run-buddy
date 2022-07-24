@@ -26,6 +26,7 @@ header {
   top: 0;
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   background-position: 80%;
   z-index: 9999;
@@ -101,14 +102,15 @@ section {
 /*hero style start*/
 .hero {
   background-image: url('../images/hero-bg.jpg');
-  align-items: flex-start;
   background-size: cover;
-  background-position: center;
   display:flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
   background-attachment: fixed;
-  background: 80%;
+  background-position: 80%;
+
+
 }
 /*hero style end*/
 
@@ -180,6 +182,72 @@ section {
 
 .hero-form button:hover {
   background-color: var(--tertiary-color);
+}
+
+
+
+.checkbox-wrapper input, .radio-wrapper input {
+  opacity: 0;
+
+}
+
+.checkbox-wrapper label, .radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
+}
+
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background:rgba(252, 255, 255, 0.75);
+  border: 1px solid var(--secondary-color);
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+
+
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+
+.radio-wrapper label::after {
+  content: "";
+  width: 20px; 
+  height: 20px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  position: absolute;
+  left: -29px;
+  top: -3px;
+  background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+}
+
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  position: absolute;
+  left: -26px;
+  top: 1px;
+  transform: rotate(-58deg);
+
+}
+
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+  content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+
+  content: "";
 }
 
 
@@ -404,68 +472,7 @@ section {
   display: flex;
 }
 
-.checkbox-wrapper input, .radio-wrapper input {
-  opacity: 0;
 
-}
-
-.checkbox-wrapper label, .radio-wrapper label {
-  position: relative;
-  left: 10px;
-  margin: 10px;
-  line-height: 1.6;
-}
-
-.checkbox-wrapper label::before, .radio-wrapper label::before {
-  content: "";
-  height: 20px;
-  width: 20px;
-  background:rgba(252, 255, 255, 0.75);
-  border: 1px solid var(--secondary-color);
-  position: absolute;
-  top: -4px;
-  left: -30px;
-}
-
-
-.radio-wrapper label::before {
-  border-radius: 50%;
-}
-
-.radio-wrapper label::after {
-  content: "";
-  height: 20px;
-  width: 20px; 
-  border-radius: 50%;
-  background: var(--secondary-color);
-  position: absolute;
-  left: -29px;
-  top: -3px;
-  background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
-}
-
-.checkbox-wrapper label::after {
-  content: "";
-  height: 6px;
-  width: 14px;
-  border-left: 2px solid var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
-  position: absolute;
-  left: -26px;
-  top: 1px;
-  transform: rotate(-58deg);
-
-}
-
-.checkbox-wrapper input + label::after, 
-.radio-wrapper input + label::after {
-  content: none;
-}
-
-.checkbox-wrapper input:checked + label::after, 
-.radio-wrapper input:checked + label::after {
-  content: "";
-}
 
 @media screen and (max-width: 980px) {
   header {
@@ -544,9 +551,6 @@ section {
  
    .step-text {
      flex: 100%;
-   }
-   .trainer-bio h3, .trainer-bio h4 {
-    display: block;
    }
  }
  
